@@ -7,6 +7,29 @@
 			var parameters = location.hash.substring(1).split("&");
 			var k = parameters[0];
 			var temp = k.split("=");
+<<<<<<< HEAD
+			
+			var flag = false;
+			var reg = new RegExp('[\\w$]');
+			var regx = new RegExp('[-.:/]');
+			d = decodeURI(temp[1]);
+			for(i=0;i<d.length;i++) {
+				
+			if(!reg.test(d.charAt(i)))
+			{
+			if(!regx.test(d.charAt(i)))
+			{
+				alert("Please Enter a valid Target URL");
+				var flag = true;
+				break;
+			}
+			}
+			}
+			
+			if (flag == false)
+			{
+=======
+>>>>>>> a8052052f37559a98886355d960ebbf46e081fae
 			q = unescape(temp[1]);
 			var date = new Date();
 			
