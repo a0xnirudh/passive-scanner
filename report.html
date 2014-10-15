@@ -349,8 +349,8 @@
 
                         >
                     <td> 1 </td>
-                    <td> <script> document.write(date);</script> </td>
-                    <td> <script> document.write(date);</script> </td>
+                    <td> <span class="date_url"> </span> </td>
+                    <td> <span class="date_url"> </span> </td>
                     <td> owtf.py -t passive <span class="q_url"> </span> </td>
                     <td> Complete </td>
                 </tr>
@@ -973,7 +973,7 @@
 
 
                     <small class="">
-                        <span id="ip"><span class="ip_url"> </span></span>:<span id="port"><script>document.write(port);</script></span>
+                        <span id="ip"><span class="ip_url"> </span></span>:<span id="port"><span class="port_url"> </span></span>
                     </small>
 		                        
 		                        <span class="btn-group hidden">
@@ -1154,6 +1154,8 @@
 <script>
     $(".q_url").text(q);
     $(".ip_url").text(ip);
+    $(".date_url").text(date);
+    $(".port_url").text(port);
     // load subreports
     $(".subreport").each(function(){
         /*$.ajax({
