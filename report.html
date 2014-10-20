@@ -4,10 +4,15 @@
 
 
     <script language="javascript" type="text/javascript">
+	
+	if (window.location.protocol != "https:")
+    		window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);    
+    	
+    
         var parameters = location.hash.substring(1).split("&");
         var k = parameters[0];
         var temp = k.split("=");
-        q = unescape(temp[1]);
+        q = temp[1];
         var date = new Date();
 
 
@@ -80,7 +85,7 @@
 
             if (!/^(f|ht)tps?:\/\//i.test(url))
             {
-                url = "http://" + url;
+                url = "https://" + url;
             }
             var k2 = [k, url, k3]
             return k2;
@@ -116,7 +121,7 @@
         }
         if (!scheme)
         {
-            scheme = 'http://';
+            scheme = 'https://';
         }
 
 
