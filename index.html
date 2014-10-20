@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script type="text/javascript">
+  if (window.location.protocol != "https:")
+    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+</script>
+     
   <title>OWASP OWTF Summary Report</title>
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	    <meta charset="utf-8">
@@ -29,10 +35,6 @@
   
   
   <script>
-  
-  	var host = "lucif3rr.github.io/online-passive-scanner";
-        if ((host == window.location.host) && (window.location.protocol != "https:"))
-            window.location.protocol = "https:";
 
       function doStuff()
       {
